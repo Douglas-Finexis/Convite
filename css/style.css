@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+:root {
+    --color-box: rgba(179, 147, 79, 0.616);
+    --sombras: rgb(0, 0, 0) 0px 10px 30px 1px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: #6f4e37;
+}
+
+/* ----------------------Imagem Igraja------------------------------- */
+#img-igreja {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#img-igreja img {
+    margin-top: 5px;
+    width: 30%;
+    height: 0 auto;
+    object-fit: cover;
+    border-radius: 500px;
+    border: 1px groove rgba(179, 147, 79, 0);
+    box-shadow: var(--sombras);
+}
+/* ----------------------------------------------------- */
+
+/* ----------------------Título------------------------------- */
+#titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(0.8rem, 5vw, 1.9rem);
+}
+
+#titulo h1 {
+    padding: 10px 20px;
+    border-radius: 15px 3px 15px 3px;
+    padding-top: 6%;
+    color: aliceblue;
+    text-shadow: black 2px 2px 5px;
+}
+/* ----------------------------------------------------- */
+
+ /* ----------------------Imagem Data Casamento------------------------------- */
+ #img-data-casamento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6%;
+    padding-bottom: 6%;
+ }
+
+ #img-data-casamento img {
+    width: 80%;
+    height: 0 auto;
+    object-fit: cover;
+    border-radius: 30px;
+    border: 1px groove rgba(179, 147, 79, 0);
+ }
+ /* ----------------------------------------------------- */
+
+ /* ----------------------Contador------------------------------- */
+#contador{
+    padding-top: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 6%;
+}
+
+.tempo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#dias, #horas, #minutos, #segundos {
+    font-size: clamp(3rem, 6vw, 4rem);
+    background-color: var(--color-box);
+    border-radius: 15px 3px 15px 3px;
+    font-family: "Epunda Slab", serif;
+    font-weight: normal;
+    text-align: center;
+    margin: 0 10px;
+    padding: 10px;
+    background-color: rgba(150, 150, 150, 0.219);
+}
+
+small {
+    font-size: clamp(0.8rem, 3vw, 1.2rem);
+    color: #000000;
+    font-weight: bolder;
+    text-shadow: #333 1px 2px 5px;
+}
+/* ----------------------------------------------------- */
+
+/* ----------------------Informações------------------------------- */
+#info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6%;
+    gap: 5%;
+    margin-bottom: 10px;
+}
+
+.container-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-info img, .container-info2 img {
+    margin-bottom: 5%;
+    width: 50%;
+    height: 0 auto;
+}
+
+.container-info span, .container-info2 span {
+    text-align: center;
+    align-items: center;
+}
+
+.container-info2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15%;
+    text-decoration: none;
+    color: black;
+    list-style: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.card.show-balao {
+    z-index: 5000;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:active {
+    transform: scale(0.95);
+}
+
+.balao-presentes, 
+.balao-confirmacao {
+    display: none;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
+    background-color: #6f4e37;
+    color: white;
+    font-family: "Playfair Display", serif;
+    padding: 8px 3px;
+    border-radius: 8px;
+    box-shadow: var(--sombras);
+    text-align: center;
+    width: 100%;
+    z-index: 6000;
+    font-size: 0.9rem;
+}
+
+.card.show-balao .balao-presentes, 
+.card.show-balao .balao-confirmacao {
+    display: block;
+}
+ /* ----------------------------------------------------- */
